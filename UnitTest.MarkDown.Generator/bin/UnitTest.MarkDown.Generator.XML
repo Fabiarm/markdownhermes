@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnitTest.MarkDown.Generator</name>
+    </assembly>
+    <members>
+        <member name="T:UnitTest.MarkDown.Generator.Exceptions.UnitTestConditionValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.Exceptions.UnitTestConditionValidator.ConditionValidator_Should_ReturnArgumentOutOfRangeException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.Exceptions.UnitTestConditionValidator.ConditionValidator_WhenFalseCondition_Should_ReturnArgumentOutOfRangeException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.Exceptions.UnitTestConditionValidator.ConditionValidator_Should_ReturnArgumentOutOfRangeException_With_Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.Exceptions.UnitTestConditionValidator.ConditionValidator_WhenFalseCondition_Should_ReturnArgumentOutOfRangeException_With_Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.Exceptions.UnitTestConditionValidator.ConditionValidator_Should_ReturnArgumentNullException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.Exceptions.UnitTestConditionValidator.ConditionValidator_Should_ReturnArgumentNullException_With_Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UnitTest.MarkDown.Generator.Helper.UnitTestSpecHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.Helper.UnitTestSpecHelper.SpecHelper_CreateGenerator_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.Helper.UnitTestSpecHelper.SpecHelper_CreateXmlVsParser_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UnitTest.MarkDown.Generator.TestData.TestClass">
+            <summary>
+            Test comments
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.TestData.TestClass.MyField">
+            <summary>
+            My field comment
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.TestData.TestClass._myField1">
+            <summary>
+            _myField1 desc
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.TestData.TestClass._myField2">
+            <summary>
+            _myField2 desc
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.TestData.TestClass.Prop1">
+            <summary>
+            Test summary
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.TestData.TestClass.Prop2">
+            <summary>
+            Test prop 2
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.TestData.TestClass.CreateProp1">
+            <summary>
+            CreateProp1 desc
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.TestData.TestClass.GetProp1">
+            <summary>
+            GetProp1 desc
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.TestData.TestClass.TesStringMethod(System.Int32,System.String)">
+            <summary>
+            Test methods1
+            </summary>
+            <param name="id1">identifier 1</param>
+            <param name="id2">identifier 2</param>
+            <returns></returns>
+        </member>
+        <member name="T:UnitTest.MarkDown.Generator.TestData.TestEnum">
+            <summary>
+            TestEnum desc
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.TestData.TestEnum.Test01">
+            <summary>
+            Test01 desc enum
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.TestData.TestEnum.Test02">
+            <summary>
+            Test02 desc enum
+            </summary>
+        </member>
+        <member name="T:UnitTest.MarkDown.Generator.TestData.ITestInterface">
+            <summary>
+            TestInterface comment
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.TestData.ITestInterface.IntProp1">
+            <summary>
+            IntProp1 in interface
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.TestData.ITestInterface.IntProp2">
+            <summary>
+            IntProp2 in interface
+            </summary>
+        </member>
+        <member name="T:UnitTest.MarkDown.Generator.UnitTestMdBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdBase.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.UnitTestMdBase.Types">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.UnitTestMdBase.Comments">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.UnitTestMdBase.MarkDownGeneratorObj">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.UnitTestMdBase.XmlVsParserObj">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.UnitTestMdBase.GetExecutingAssembly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.UnitTestMdBase.PathToXmlDocumentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:UnitTest.MarkDown.Generator.UnitTestMdBase.PathToDll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdBase.UseTypes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdBase.UseComments">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdBase.UseMarkDownGenerator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdBase.UseXmlVsParser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdBase.UseExecutingAssembly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdBase.SetUp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.UseTypes">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.UseComments">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.UseMarkDownGenerator">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.UseXmlVsParser">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.UseExecutingAssembly">
+            <inheritdoc />
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.SetUp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.MarkDownBuilder_Load_Should_ReturnNoException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.MarkDownBuilder_Build_Should_ReturnNoException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.MarkDownBuilder_Load_WhenInvalidDllPath_Should_ReturnException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.MarkDownBuilder_Build_Should_ReturnException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.MarkDownBuilder_Load_WhenInvalidXmlDllPath_Should_ReturnException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UnitTest.MarkDown.Generator.UnitTestMdGenerator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdGenerator.UseTypes">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdGenerator.UseComments">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdGenerator.UseMarkDownGenerator">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdGenerator.UseXmlVsParser">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdGenerator.UseExecutingAssembly">
+            <inheritdoc />
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdGenerator.MdGenerator_GetTypes_Should_ReturnValidState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdGenerator.MdGenerator_GetTypes_Should_ReturnException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdGenerator.MdGenerator_UpdateComments_Should_ReturnValidState">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.SetUp">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_Append_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_FileName_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_AppendLine_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_Code_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_CodeQuote_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_Header_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_HeaderWithCode_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_Image_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_Link_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_List_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdStringBuilder.MdStringEditor_ListLink_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UnitTest.MarkDown.Generator.UnitTestXmlVsParser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.UseTypes">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.UseComments">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.UseMarkDownGenerator">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.UseXmlVsParser">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.UseExecutingAssembly">
+            <inheritdoc />
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.XmlVsParser_Should_ReturnValidResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.XmlVsParser_WhenNullablePath_Should_ReturnException">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

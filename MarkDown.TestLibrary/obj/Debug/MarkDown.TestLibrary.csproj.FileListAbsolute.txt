@@ -1,0 +1,8 @@
+C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\bin\MarkDown.TestLibrary.XML
+C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\bin\MarkDown.TestLibrary.dll
+C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\bin\MarkDown.TestLibrary.pdb
+C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\bin\MarkDown.Generator.dll
+C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\bin\MarkDown.Generator.pdb
+C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\obj\Debug\MarkDown.TestLibrary.csprojResolveAssemblyReference.cache
+C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\obj\Debug\MarkDown.TestLibrary.dll
+C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\obj\Debug\MarkDown.TestLibrary.pdb

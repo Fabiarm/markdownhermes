@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkDown.Generator", "MarkDown.Generator\MarkDown.Generator.csproj", "{740BBBE1-780B-4D73-9A50-5E762A6005E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.MarkDown.Generator", "UnitTest.MarkDown.Generator\UnitTest.MarkDown.Generator.csproj", "{E6EF5B6D-48D2-4DE3-A656-6A6127DEACEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkDown.Hermes", "MarkDown.Hermes\MarkDown.Hermes.csproj", "{DFDA70BE-450A-42EB-BE0D-FE7FB81B1A95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.MarkDown.Hermes", "UnitTest.MarkDown.Hermes\UnitTest.MarkDown.Hermes.csproj", "{061F67D3-C3F1-4B01-BC08-2180D84EAC18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EFA2295D-E239-49FE-B9E3-8CAC9D5778A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkDown.TestLibrary", "MarkDown.TestLibrary\MarkDown.TestLibrary.csproj", "{9750BBC3-9E0D-43BE-A5E1-799B6EE7C16D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{740BBBE1-780B-4D73-9A50-5E762A6005E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740BBBE1-780B-4D73-9A50-5E762A6005E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740BBBE1-780B-4D73-9A50-5E762A6005E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740BBBE1-780B-4D73-9A50-5E762A6005E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6EF5B6D-48D2-4DE3-A656-6A6127DEACEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6EF5B6D-48D2-4DE3-A656-6A6127DEACEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6EF5B6D-48D2-4DE3-A656-6A6127DEACEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6EF5B6D-48D2-4DE3-A656-6A6127DEACEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFDA70BE-450A-42EB-BE0D-FE7FB81B1A95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFDA70BE-450A-42EB-BE0D-FE7FB81B1A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFDA70BE-450A-42EB-BE0D-FE7FB81B1A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFDA70BE-450A-42EB-BE0D-FE7FB81B1A95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{061F67D3-C3F1-4B01-BC08-2180D84EAC18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061F67D3-C3F1-4B01-BC08-2180D84EAC18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061F67D3-C3F1-4B01-BC08-2180D84EAC18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061F67D3-C3F1-4B01-BC08-2180D84EAC18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9750BBC3-9E0D-43BE-A5E1-799B6EE7C16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9750BBC3-9E0D-43BE-A5E1-799B6EE7C16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9750BBC3-9E0D-43BE-A5E1-799B6EE7C16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9750BBC3-9E0D-43BE-A5E1-799B6EE7C16D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6EF5B6D-48D2-4DE3-A656-6A6127DEACEA} = {EFA2295D-E239-49FE-B9E3-8CAC9D5778A0}
+		{061F67D3-C3F1-4B01-BC08-2180D84EAC18} = {EFA2295D-E239-49FE-B9E3-8CAC9D5778A0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://nselyutin.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MarkDown.Generator\\MarkDown.Generator.csproj
+		SccProjectName1 = MarkDown.Generator
+		SccLocalPath1 = MarkDown.Generator
+		SccProjectUniqueName2 = UnitTest.MarkDown.Generator\\UnitTest.MarkDown.Generator.csproj
+		SccProjectTopLevelParentUniqueName2 = MarkDownGenerator.Solution.sln
+		SccProjectName2 = UnitTest.MarkDown.Generator
+		SccLocalPath2 = UniteTest.MarkDown.Generator
+		SccProjectUniqueName3 = MarkDown.Hermes\\MarkDown.Hermes.csproj
+		SccProjectName3 = MarkDown.Hermes
+		SccLocalPath3 = MarkDown.Hermes
+		SccProjectUniqueName4 = UnitTest.MarkDown.Hermes\\UnitTest.MarkDown.Hermes.csproj
+		SccProjectTopLevelParentUniqueName4 = MarkDownGenerator.Solution.sln
+		SccProjectName4 = UnitTest.MarkDown.Hermes
+		SccLocalPath4 = UnitTest.MarkDown.Hermes
+		SccProjectUniqueName5 = MarkDown.TestLibrary\\MarkDown.TestLibrary.csproj
+		SccProjectName5 = MarkDown.TestLibrary
+		SccLocalPath5 = MarkDown.TestLibrary
+	EndGlobalSection
+EndGlobal

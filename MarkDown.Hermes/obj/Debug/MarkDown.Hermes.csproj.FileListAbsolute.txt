@@ -1,0 +1,22 @@
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\bin\MarkDown.Hermes.targets
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\bin\MarkDown.Hermes.exe.config
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\bin\MarkDown.Hermes.exe
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\bin\MarkDown.Hermes.pdb
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\bin\CommandLine.dll
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\bin\MarkDown.Generator.dll
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\bin\MarkDown.Generator.pdb
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\bin\CommandLine.xml
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\obj\Debug\MarkDown.Hermes.csprojResolveAssemblyReference.cache
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\obj\Debug\MarkDown.Hermes.exe
+C:\Projects\MDG\MarkDown Generator\MarkDown.Hermes\obj\Debug\MarkDown.Hermes.pdb
+C:\GitHub\markdownhermes\MarkDown.Hermes\bin\MarkDown.Hermes.targets
+C:\GitHub\markdownhermes\MarkDown.Hermes\bin\MarkDown.Hermes.exe.config
+C:\GitHub\markdownhermes\MarkDown.Hermes\bin\MarkDown.Hermes.exe
+C:\GitHub\markdownhermes\MarkDown.Hermes\bin\MarkDown.Hermes.pdb
+C:\GitHub\markdownhermes\MarkDown.Hermes\bin\CommandLine.dll
+C:\GitHub\markdownhermes\MarkDown.Hermes\bin\MarkDown.Generator.dll
+C:\GitHub\markdownhermes\MarkDown.Hermes\bin\MarkDown.Generator.pdb
+C:\GitHub\markdownhermes\MarkDown.Hermes\bin\CommandLine.xml
+C:\GitHub\markdownhermes\MarkDown.Hermes\obj\Debug\MarkDown.Hermes.csprojResolveAssemblyReference.cache
+C:\GitHub\markdownhermes\MarkDown.Hermes\obj\Debug\MarkDown.Hermes.exe
+C:\GitHub\markdownhermes\MarkDown.Hermes\obj\Debug\MarkDown.Hermes.pdb

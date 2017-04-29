@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="AfterBuild">
+    <Error Condition="!Exists('$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).dll')"
+           Text="MarkDown.Hermes can not generate Markdown files: Can not find class library ($(AssemblyName).dll)"
+           File="$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).dll"/>
+    <Warning
+      Condition="!Exists('$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).xml')"
+      Text="MarkDown.Hermes can not generate Markdown file(s): Can not find xml documentation file matching assembly name. Please confirm that your project file is configured to output the xml documentation file in this build configuration."
+      File="$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).xml"
+    />
+    <MakeDir Directories="$(MSBuildProjectDirectory)\..\Docs" />
+    <Exec
+      Command='"$(MSBuildThisFileDirectory)\..\Tools\MarkDown.Hermes.exe" -d "$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).dll" -o "$(MSBuildProjectDirectory)\..\Docs" -m'
+      Condition="Exists('$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).xml') And Exists('$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).dll')"
+    />
+    <Message
+      Importance="high"
+      Text="MarkDown.Hermes generator has created files: $(MSBuildProjectDirectory)\..\Docs\"
+      Condition="Exists('$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).xml') And Exists('$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).dll')"
+    />
+  </Target>
+</Project>

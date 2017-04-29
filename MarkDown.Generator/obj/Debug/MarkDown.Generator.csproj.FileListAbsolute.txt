@@ -1,0 +1,4 @@
+C:\Projects\MDG\MarkDown Generator\MarkDown.Generator\bin\MarkDown.Generator.dll
+C:\Projects\MDG\MarkDown Generator\MarkDown.Generator\bin\MarkDown.Generator.pdb
+C:\Projects\MDG\MarkDown Generator\MarkDown.Generator\obj\Debug\MarkDown.Generator.dll
+C:\Projects\MDG\MarkDown Generator\MarkDown.Generator\obj\Debug\MarkDown.Generator.pdb
