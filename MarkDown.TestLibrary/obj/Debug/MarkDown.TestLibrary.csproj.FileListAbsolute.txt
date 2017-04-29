@@ -6,3 +6,11 @@ C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\bin\MarkDown.Generator.p
 C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\obj\Debug\MarkDown.TestLibrary.csprojResolveAssemblyReference.cache
 C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\obj\Debug\MarkDown.TestLibrary.dll
 C:\Projects\MDG\MarkDown Generator\MarkDown.TestLibrary\obj\Debug\MarkDown.TestLibrary.pdb
+C:\GitHub\markdownhermes\MarkDown.TestLibrary\bin\MarkDown.TestLibrary.XML
+C:\GitHub\markdownhermes\MarkDown.TestLibrary\bin\MarkDown.TestLibrary.dll
+C:\GitHub\markdownhermes\MarkDown.TestLibrary\bin\MarkDown.TestLibrary.pdb
+C:\GitHub\markdownhermes\MarkDown.TestLibrary\bin\MarkDown.Generator.dll
+C:\GitHub\markdownhermes\MarkDown.TestLibrary\bin\MarkDown.Generator.pdb
+C:\GitHub\markdownhermes\MarkDown.TestLibrary\obj\Debug\MarkDown.TestLibrary.csprojResolveAssemblyReference.cache
+C:\GitHub\markdownhermes\MarkDown.TestLibrary\obj\Debug\MarkDown.TestLibrary.dll
+C:\GitHub\markdownhermes\MarkDown.TestLibrary\obj\Debug\MarkDown.TestLibrary.pdb

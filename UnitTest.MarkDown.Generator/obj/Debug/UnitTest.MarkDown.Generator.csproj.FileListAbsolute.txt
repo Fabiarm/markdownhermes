@@ -20,3 +20,25 @@ C:\Projects\MDG\MarkDown Generator\UniteTest.MarkDown.Generator\bin\Microsoft.Vi
 C:\Projects\MDG\MarkDown Generator\UniteTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.csprojResolveAssemblyReference.cache
 C:\Projects\MDG\MarkDown Generator\UniteTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.dll
 C:\Projects\MDG\MarkDown Generator\UniteTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.pdb
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\UnitTest.MarkDown.Generator.XML
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\UnitTest.MarkDown.Generator.dll
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\UnitTest.MarkDown.Generator.pdb
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\Castle.Core.dll
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\FluentAssertions.Core.dll
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\FluentAssertions.dll
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\MarkDown.Generator.dll
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\Moq.dll
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\nunit.framework.dll
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\MarkDown.Generator.pdb
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\Castle.Core.xml
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\FluentAssertions.pdb
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\FluentAssertions.xml
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\FluentAssertions.Core.pdb
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\FluentAssertions.Core.xml
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\Moq.xml
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\nunit.framework.xml
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.csprojResolveAssemblyReference.cache
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.dll
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.pdb
