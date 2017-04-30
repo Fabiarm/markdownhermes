@@ -15,6 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EFA2295D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkDown.TestLibrary", "MarkDown.TestLibrary\MarkDown.TestLibrary.csproj", "{9750BBC3-9E0D-43BE-A5E1-799B6EE7C16D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BEB3A2BE-0DE6-47DF-AA2D-DC8B3678E853}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,28 +53,5 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E6EF5B6D-48D2-4DE3-A656-6A6127DEACEA} = {EFA2295D-E239-49FE-B9E3-8CAC9D5778A0}
 		{061F67D3-C3F1-4B01-BC08-2180D84EAC18} = {EFA2295D-E239-49FE-B9E3-8CAC9D5778A0}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://nselyutin.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = MarkDown.Generator\\MarkDown.Generator.csproj
-		SccProjectName1 = MarkDown.Generator
-		SccLocalPath1 = MarkDown.Generator
-		SccProjectUniqueName2 = UnitTest.MarkDown.Generator\\UnitTest.MarkDown.Generator.csproj
-		SccProjectTopLevelParentUniqueName2 = MarkDownGenerator.Solution.sln
-		SccProjectName2 = UnitTest.MarkDown.Generator
-		SccLocalPath2 = UniteTest.MarkDown.Generator
-		SccProjectUniqueName3 = MarkDown.Hermes\\MarkDown.Hermes.csproj
-		SccProjectName3 = MarkDown.Hermes
-		SccLocalPath3 = MarkDown.Hermes
-		SccProjectUniqueName4 = UnitTest.MarkDown.Hermes\\UnitTest.MarkDown.Hermes.csproj
-		SccProjectTopLevelParentUniqueName4 = MarkDownGenerator.Solution.sln
-		SccProjectName4 = UnitTest.MarkDown.Hermes
-		SccLocalPath4 = UnitTest.MarkDown.Hermes
-		SccProjectUniqueName5 = MarkDown.TestLibrary\\MarkDown.TestLibrary.csproj
-		SccProjectName5 = MarkDown.TestLibrary
-		SccLocalPath5 = MarkDown.TestLibrary
 	EndGlobalSection
 EndGlobal

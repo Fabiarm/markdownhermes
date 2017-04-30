@@ -5,8 +5,6 @@ The project allows to generate makdown syntax using special attributes.
 0.  Software Requirements:
     - VS 2015 with Update 3;
     - [ReSharper Ultimate](https://www.jetbrains.com/resharper/) (trial);
-    - SQL Server 2014 (Database Engine);
-    - Installed database [R] (25 Gb);
 1.	Installation process
     - Download projects;
     - Open solution;
