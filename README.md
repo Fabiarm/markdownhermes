@@ -1,5 +1,5 @@
 # Introduction
-The project allows to generate makdown syntax using special attributes.
+Convert Visual Studio generated XML Comment files (using dll file) into flavoured MarkDown. Allows to mark class, interface, struct, method, field, property using __[Documented]__ attribute. To ignore artefact use __[IgnoredDocs]__
 
 # Getting Started
 0.  Software Requirements:
@@ -12,12 +12,5 @@ The project allows to generate makdown syntax using special attributes.
 2.	Software dependencies
     - Only Nuget packages;
 
-# Build and Test
-Do not ready.
-
-# Contribute
-Do not ready.
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
+# Documentation
+See [here](https://github.com/Fabiarm/markdownhermes/wiki/Home)
