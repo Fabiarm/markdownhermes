@@ -8,6 +8,7 @@
 	  <owners>Nikolay Selyutin</owners>
 	  <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
 	  <projectUrl>https://github.com/Fabiarm/markdownhermes/tree/master</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Fabiarm/markdownhermes/master/icons/icon_64x64.png</iconUrl>
 	  <requireLicenseAcceptance>false</requireLicenseAcceptance>
 	  <description>Convert Visual Studio generated XML Comment XML files (using dll file) into flavoured MarkDown. Allows to mark class, interface, struct, method, field, property using [Documented] attribute. To ignore use [IgnoredDocs]</description>
 	  <summary>Allows for creating markdown files (md) for each artefact in a library project. Use the following types: class,interface,struct,method,field,property. Use [Documented]/[IgnoredDocs] attribute</summary>
