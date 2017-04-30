@@ -26,13 +26,10 @@ namespace UnitTest.MarkDown.Generator
         public override bool UseXmlVsParser => true;
 
         /// <inheritdoc />
-        public override bool UseExecutingAssembly => true;
+        public override bool UseTestExecutingAssembly => true;
 
-        /// <summary>
-        /// 
-        /// </summary>
-        [SetUp]
-        public new void SetUp()
+        /// <inheritdoc />
+        public override void SetUpConfig()
         {
             _builder = new MarkDownBuilder(MarkDownGeneratorObj, XmlVsParserObj);
         }

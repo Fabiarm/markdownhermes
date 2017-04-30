@@ -84,20 +84,16 @@
     <Compile Include="Helper\UnitTestExecutor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TestData\MarkDown.TestLibrary.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestData\MarkDown.TestLibrary.XML">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MarkDown.Hermes\MarkDown.Hermes.csproj">
       <Project>{dfda70be-450a-42eb-be0d-fe7fb81b1a95}</Project>
       <Name>MarkDown.Hermes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MarkDown.TestLibrary\MarkDown.TestLibrary.csproj">
+      <Project>{9750bbc3-9e0d-43be-a5e1-799b6ee7c16d}</Project>
+      <Name>MarkDown.TestLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

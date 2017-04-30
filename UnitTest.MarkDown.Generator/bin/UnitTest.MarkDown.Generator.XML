@@ -54,85 +54,6 @@
             
             </summary>
         </member>
-        <member name="T:UnitTest.MarkDown.Generator.TestData.TestClass">
-            <summary>
-            Test comments
-            </summary>
-        </member>
-        <member name="P:UnitTest.MarkDown.Generator.TestData.TestClass.MyField">
-            <summary>
-            My field comment
-            </summary>
-        </member>
-        <member name="F:UnitTest.MarkDown.Generator.TestData.TestClass._myField1">
-            <summary>
-            _myField1 desc
-            </summary>
-        </member>
-        <member name="F:UnitTest.MarkDown.Generator.TestData.TestClass._myField2">
-            <summary>
-            _myField2 desc
-            </summary>
-        </member>
-        <member name="P:UnitTest.MarkDown.Generator.TestData.TestClass.Prop1">
-            <summary>
-            Test summary
-            </summary>
-        </member>
-        <member name="P:UnitTest.MarkDown.Generator.TestData.TestClass.Prop2">
-            <summary>
-            Test prop 2
-            </summary>
-        </member>
-        <member name="M:UnitTest.MarkDown.Generator.TestData.TestClass.CreateProp1">
-            <summary>
-            CreateProp1 desc
-            </summary>
-        </member>
-        <member name="M:UnitTest.MarkDown.Generator.TestData.TestClass.GetProp1">
-            <summary>
-            GetProp1 desc
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:UnitTest.MarkDown.Generator.TestData.TestClass.TesStringMethod(System.Int32,System.String)">
-            <summary>
-            Test methods1
-            </summary>
-            <param name="id1">identifier 1</param>
-            <param name="id2">identifier 2</param>
-            <returns></returns>
-        </member>
-        <member name="T:UnitTest.MarkDown.Generator.TestData.TestEnum">
-            <summary>
-            TestEnum desc
-            </summary>
-        </member>
-        <member name="F:UnitTest.MarkDown.Generator.TestData.TestEnum.Test01">
-            <summary>
-            Test01 desc enum
-            </summary>
-        </member>
-        <member name="F:UnitTest.MarkDown.Generator.TestData.TestEnum.Test02">
-            <summary>
-            Test02 desc enum
-            </summary>
-        </member>
-        <member name="T:UnitTest.MarkDown.Generator.TestData.ITestInterface">
-            <summary>
-            TestInterface comment
-            </summary>
-        </member>
-        <member name="P:UnitTest.MarkDown.Generator.TestData.ITestInterface.IntProp1">
-            <summary>
-            IntProp1 in interface
-            </summary>
-        </member>
-        <member name="P:UnitTest.MarkDown.Generator.TestData.ITestInterface.IntProp2">
-            <summary>
-            IntProp2 in interface
-            </summary>
-        </member>
         <member name="T:UnitTest.MarkDown.Generator.UnitTestMdBase">
             <summary>
             
@@ -198,7 +119,12 @@
             
             </summary>
         </member>
-        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdBase.UseExecutingAssembly">
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdBase.UseTestExecutingAssembly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdBase.SetUpConfig">
             <summary>
             
             </summary>
@@ -225,13 +151,11 @@
         <member name="P:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.UseXmlVsParser">
             <inheritdoc />
         </member>
-        <member name="P:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.UseExecutingAssembly">
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.UseTestExecutingAssembly">
             <inheritdoc />
         </member>
-        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.SetUp">
-            <summary>
-            
-            </summary>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.SetUpConfig">
+            <inheritdoc />
         </member>
         <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.MarkDownBuilder_Load_Should_ReturnNoException">
             <summary>
@@ -275,7 +199,10 @@
         <member name="P:UnitTest.MarkDown.Generator.UnitTestMdGenerator.UseXmlVsParser">
             <inheritdoc />
         </member>
-        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdGenerator.UseExecutingAssembly">
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdGenerator.UseTestExecutingAssembly">
+            <inheritdoc />
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdGenerator.SetUpConfig">
             <inheritdoc />
         </member>
         <member name="M:UnitTest.MarkDown.Generator.UnitTestMdGenerator.MdGenerator_GetTypes_Should_ReturnValidState">
@@ -375,7 +302,10 @@
         <member name="P:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.UseXmlVsParser">
             <inheritdoc />
         </member>
-        <member name="P:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.UseExecutingAssembly">
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.UseTestExecutingAssembly">
+            <inheritdoc />
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.SetUpConfig">
             <inheritdoc />
         </member>
         <member name="M:UnitTest.MarkDown.Generator.UnitTestXmlVsParser.XmlVsParser_Should_ReturnValidResult">

@@ -71,7 +71,11 @@ namespace UnitTest.MarkDown.Generator
         /// <summary>
         /// 
         /// </summary>
-        public abstract bool UseExecutingAssembly { get; }
+        public abstract bool UseTestExecutingAssembly { get; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public abstract void SetUpConfig();
 
         /// <summary>
         /// 
@@ -80,18 +84,20 @@ namespace UnitTest.MarkDown.Generator
         public void SetUp()
         {
             SetUpConfiguration();
+            SetUpConfig();
         }
 
         private void SetUpConfiguration()
         {
-            if (UseExecutingAssembly)
+            if (UseTestExecutingAssembly)
             {
-                GetExecutingAssembly = Assembly.GetExecutingAssembly();
-                var codeBase = new Uri(GetExecutingAssembly.CodeBase);
+                var assembly = Assembly.GetExecutingAssembly();
+                var codeBase = new Uri(assembly.CodeBase);
                 PathToXmlDocumentation = Path.Combine(path1: Path.GetDirectoryName(codeBase.LocalPath),
-                    path2: "UnitTest.MarkDown.Generator.xml");
+                    path2: "MarkDown.TestLibrary.xml");
                 PathToDll = Path.Combine(path1: Path.GetDirectoryName(codeBase.LocalPath),
-                    path2: "UnitTest.MarkDown.Generator.dll");
+                    path2: "MarkDown.TestLibrary.dll");
+                GetExecutingAssembly = Assembly.LoadFile(PathToDll);
             }
             if (UseXmlVsParser)
                 XmlVsParserObj = new XmlVsParser();

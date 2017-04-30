@@ -80,13 +80,10 @@
   <ItemGroup>
     <Compile Include="Exceptions\UnitTestConditionValidator.cs" />
     <Compile Include="Helper\UnitTestSpecHelper.cs" />
-    <Compile Include="TestData\TestClass.cs" />
-    <Compile Include="TestData\TestEnum.cs" />
     <Compile Include="UnitTestMdBase.cs" />
     <Compile Include="UnitTestMarkDownBuilder.cs" />
     <Compile Include="UnitTestMdGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestData\ITestInterface.cs" />
     <Compile Include="UnitTestMdStringBuilder.cs" />
     <Compile Include="UnitTestXmlVsParser.cs" />
   </ItemGroup>
@@ -97,6 +94,10 @@
     <ProjectReference Include="..\MarkDown.Generator\MarkDown.Generator.csproj">
       <Project>{740bbbe1-780b-4d73-9a50-5e762a6005e8}</Project>
       <Name>MarkDown.Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MarkDown.TestLibrary\MarkDown.TestLibrary.csproj">
+      <Project>{9750bbc3-9e0d-43be-a5e1-799b6ee7c16d}</Project>
+      <Name>MarkDown.TestLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

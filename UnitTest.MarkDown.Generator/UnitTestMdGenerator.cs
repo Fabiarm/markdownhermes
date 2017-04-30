@@ -24,7 +24,12 @@ namespace UnitTest.MarkDown.Generator
         public override bool UseXmlVsParser => false;
 
         /// <inheritdoc />
-        public override bool UseExecutingAssembly => true;
+        public override bool UseTestExecutingAssembly => true;
+
+        /// <inheritdoc />
+        public override void SetUpConfig()
+        {
+        }
 
         /// <summary>
         /// 

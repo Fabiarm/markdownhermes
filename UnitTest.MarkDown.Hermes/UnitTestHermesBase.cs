@@ -27,9 +27,9 @@ namespace UnitTest.MarkDown.Hermes
                 var assembly = Assembly.GetExecutingAssembly();
                 var codeBase = new Uri(assembly.CodeBase);
                 DllPathObj = Path.Combine(Path.GetDirectoryName(codeBase.LocalPath),
-                    @"TestData\MarkDown.TestLibrary.dll");
+                    @"MarkDown.TestLibrary.dll");
                 XmlPathObj = Path.Combine(Path.GetDirectoryName(codeBase.LocalPath),
-                    @"TestData\MarkDown.TestLibrary.xml");
+                    @"MarkDown.TestLibrary.xml");
                 OutPutPathObj = Path.Combine(Path.GetDirectoryName(codeBase.LocalPath),
                     @"Docs");
                 OptionsObj = new Options {InputDllFilePath = DllPathObj, OutputDirectoryPath = OutPutPathObj};

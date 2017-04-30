@@ -42,3 +42,6 @@ C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\Microsoft.VisualStudio.
 C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.csprojResolveAssemblyReference.cache
 C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.dll
 C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.pdb
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\MarkDown.TestLibrary.dll
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\MarkDown.TestLibrary.pdb
+C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\MarkDown.TestLibrary.xml
