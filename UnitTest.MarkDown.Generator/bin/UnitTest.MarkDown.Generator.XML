@@ -225,6 +225,18 @@
             
             </summary>
         </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdFluentBuilder.MdFluentBuilder_Build_Should_ReturnValidContentForParent(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="template"></param>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdFluentBuilder.MdFluentBuilder_Build_Should_ReturnValidContentForProperties(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="template"></param>
+        </member>
         <member name="T:UnitTest.MarkDown.Generator.UnitTestMdGenerator">
             <summary>
             

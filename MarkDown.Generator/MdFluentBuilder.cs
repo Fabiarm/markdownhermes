@@ -35,8 +35,10 @@ namespace MarkDown.Generator
         private void ParseTemplate(IMdStringEditor mb)
         {
             var template = Template;
-            var type = Type;
-            mb.AppendLine("test");
+            template = template.Replace("@prefix", Type.Prefix);
+            template = template.Replace("@fullName", Type.FullName);
+            template = template.Replace("@summary", Type.Summary);
+            mb.AppendLine(template);
         }
     }
 }

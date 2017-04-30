@@ -44,20 +44,7 @@ namespace MarkDown.Generator.Models
                         ? "struct"
                         : "class";
 
-            //return $"public {stat}{abst}{classOrStructOrEnumOrInterface} {BeautifyType(RepresentType, true)}";
             return $"public {stat}{abst}{classOrStructOrEnumOrInterface} {RepresentType.Name}";
         }
-
-        //private string BeautifyType(Type type, bool isFull = false)
-        //{
-        //    if (type == null) return "";
-        //    if (type == typeof(void)) return "void";
-        //    if (!type.IsGenericType) return (isFull) ? type.FullName : type.Name;
-
-        //    var innerFormat = string.Join(", ", type.GetGenericArguments().Select(x => BeautifyType(x)));
-        //    return Regex.Replace(
-        //               isFull ? type.GetGenericTypeDefinition().FullName : type.GetGenericTypeDefinition().Name,
-        //               @"`.+$", "") + "<" + innerFormat + ">";
-        //}
     }
 }

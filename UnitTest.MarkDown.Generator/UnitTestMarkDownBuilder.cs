@@ -111,7 +111,15 @@ namespace UnitTest.MarkDown.Generator
         /// 
         /// </summary>
         [TestCase(@"
-        template
+        ### @Prefix
+        __Namespace__: @FullName
+        * * *
+        __Summary__: @Summary
+
+        if(@properties){
+        * * *
+        __Properties__
+        }
         ")]
         public void MarkDownBuilder_BuildWithTemplate_Should_ReturnNoException(string template)
         {
