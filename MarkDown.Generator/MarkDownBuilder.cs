@@ -60,5 +60,19 @@ namespace MarkDown.Generator
                 _content.Add(mb);
             }
         }
+
+        public void Build(string template)
+        {
+            ConditionValidator.ThrowSystemExceptionIfNotValid<OperationCanceledException>(Types == null,
+                $"Should be run 'Load' method");
+            ConditionValidator.ThrowExceptionIfNotValid<ArgumentNullException>((string.IsNullOrWhiteSpace(template)),
+                nameof(template));
+            _content = new List<IMdStringEditor>();
+            foreach (var type in Types)
+            {
+                var mb = new MdFluentBuilder(template, type.Name, type);
+                _content.Add(mb.Build());
+            }
+        }
     }
 }

@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
+using MarkDown.Generator.Exceptions;
 using MarkDown.Generator.Interfaces;
 
 namespace MarkDown.Generator
@@ -10,6 +12,8 @@ namespace MarkDown.Generator
 
         public MdStringEditor(string fileName)
         {
+            ConditionValidator.ThrowExceptionIfNotValid<ArgumentNullException>((string.IsNullOrWhiteSpace(fileName)),
+                nameof(fileName));
             FileName = fileName;
         }
 

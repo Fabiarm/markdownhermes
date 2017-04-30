@@ -10,5 +10,6 @@ namespace MarkDown.Generator.Interfaces
         string FullContent { get; }
         void Load(string dllPath, string dllXmlPath);
         void Build();
+        void Build(string template);
     }
 }

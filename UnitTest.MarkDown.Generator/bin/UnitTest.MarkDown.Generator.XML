@@ -177,7 +177,50 @@
             
             </summary>
         </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.MarkDownBuilder_BuildWithTemplate_Should_ReturnException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.MarkDownBuilder_BuildWithTemplate_WhenNullableTypes_Should_ReturnException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.MarkDownBuilder_BuildWithTemplate_Should_ReturnNoException(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:UnitTest.MarkDown.Generator.UnitTestMarkDownBuilder.MarkDownBuilder_Load_WhenInvalidXmlDllPath_Should_ReturnException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UnitTest.MarkDown.Generator.UnitTestMdFluentBuilder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdFluentBuilder.UseTypes">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdFluentBuilder.UseComments">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdFluentBuilder.UseMarkDownGenerator">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdFluentBuilder.UseXmlVsParser">
+            <inheritdoc />
+        </member>
+        <member name="P:UnitTest.MarkDown.Generator.UnitTestMdFluentBuilder.UseTestExecutingAssembly">
+            <inheritdoc />
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdFluentBuilder.SetUpConfig">
+            <inheritdoc />
+        </member>
+        <member name="M:UnitTest.MarkDown.Generator.UnitTestMdFluentBuilder.MdFluentBuilder_Build_Should_ReturnException(System.String,System.String,System.Boolean)">
             <summary>
             
             </summary>

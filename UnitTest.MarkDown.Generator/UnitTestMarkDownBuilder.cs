@@ -79,10 +79,53 @@ namespace UnitTest.MarkDown.Generator
         [Test]
         public void MarkDownBuilder_Build_Should_ReturnException()
         {
-
             Assert.Throws(typeof(OperationCanceledException),
                 () => _builder.Build());
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [Test]
+        public void MarkDownBuilder_BuildWithTemplate_Should_ReturnException()
+        {
+            _builder.Load(PathToDll, PathToXmlDocumentation);
+            _builder.Types.Should().NotBeNull();
+            _builder.Types.Count.Should().BePositive();
+            Assert.Throws(typeof(ArgumentNullException),
+                () => _builder.Build(" "));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [Test]
+        public void MarkDownBuilder_BuildWithTemplate_WhenNullableTypes_Should_ReturnException()
+        {
+
+            Assert.Throws(typeof(OperationCanceledException),
+                () => _builder.Build("template"));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [TestCase(@"
+        template
+        ")]
+        public void MarkDownBuilder_BuildWithTemplate_Should_ReturnNoException(string template)
+        {
+            _builder.Load(PathToDll, PathToXmlDocumentation);
+            _builder.Types.Should().NotBeNull();
+            _builder.Types.Count.Should().BePositive();
+            _builder.Build(template);
+            _builder.Content.Should().NotBeNull();
+            _builder.Content.Should().AllBeOfType<MdStringEditor>();
+            _builder.Content.Should().AllBeAssignableTo<IMdStringEditor>();
+            foreach (var stringBuilder in _builder.Content)
+                stringBuilder.ToString().Should().NotBeNullOrEmpty();
+        }
+
         /// <summary>
         /// 
         /// </summary>

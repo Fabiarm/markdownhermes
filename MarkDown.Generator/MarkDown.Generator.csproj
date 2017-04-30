@@ -57,6 +57,8 @@
     <Compile Include="Helper\MarkDownEntityCreator.cs" />
     <Compile Include="Helper\HelpUtils.cs" />
     <Compile Include="Helper\SpecHelper.cs" />
+    <Compile Include="Interfaces\IMdFluentBuilder.cs" />
+    <Compile Include="MdFluentBuilder.cs" />
     <Compile Include="Models\ItemEqualityComparer.cs" />
     <Compile Include="Helper\MdStringBuilder.cs" />
     <Compile Include="Interfaces\IMarkDownBuilder.cs" />
