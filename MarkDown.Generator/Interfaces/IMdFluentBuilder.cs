@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using MarkDown.Generator.Models;
+﻿using MarkDown.Generator.Models;
 
 namespace MarkDown.Generator.Interfaces
 {

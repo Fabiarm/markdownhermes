@@ -30,7 +30,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RegisterForComInterop>false</RegisterForComInterop>
-    <DocumentationFile>bin\UnitTest.MarkDown.Generator.XML</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -79,6 +80,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Exceptions\UnitTestConditionValidator.cs" />
+    <Compile Include="Helper\TestVariables.cs" />
     <Compile Include="Helper\UnitTestSpecHelper.cs" />
     <Compile Include="UnitTestMdBase.cs" />
     <Compile Include="UnitTestMarkDownBuilder.cs" />

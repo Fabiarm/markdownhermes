@@ -11,7 +11,7 @@ namespace MarkDown.TestLibrary
         /// <summary>
         /// IntProp1 in interface
         /// </summary>
-        [IgnoredDocs]
+       // [IgnoredDocs]
         int IntProp1 { get; set; }
 
         /// <summary>

@@ -43,8 +43,8 @@ namespace MarkDown.Generator.Models
                     : RepresentType.IsValueType
                         ? "struct"
                         : "class";
-
-            return $"public {stat}{abst}{classOrStructOrEnumOrInterface} {RepresentType.Name}";
+            var modificator = RepresentType.IsPublic ? "public " : "";
+            return $"{modificator}{stat}{abst}{classOrStructOrEnumOrInterface} {RepresentType.Name}";
         }
     }
 }

@@ -9,6 +9,7 @@ __Properties__
 | Value | Name | Summary | 
 | --- | --- | --- | 
 | string | MyField | My field comment | 
+| int32 | Prop1 | Test summary | 
 | int32 | Prop2 | Test prop 2 | 
 
 

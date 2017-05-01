@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentAssertions;
 using MarkDown.Generator;
 using MarkDown.Generator.Interfaces;
 using MarkDown.Generator.Models;
-using Moq;
 using NUnit.Framework;
+using UnitTest.MarkDown.Generator.Helper;
 
 namespace UnitTest.MarkDown.Generator
 {
@@ -63,20 +61,13 @@ namespace UnitTest.MarkDown.Generator
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="template"></param>
-        [TestCase(@"
-        ### @prefix
-        __Namespace__: @fullName
-        * * *
-        __Summary__: @summary
-        }
-        ")]
-        public void MdFluentBuilder_Build_Should_ReturnValidContentForParent(string template)
+        [Test]
+        public void MdFluentBuilder_Build_Should_ReturnValidContentForParent()
         {
             _mdBuilder = new MarkDownBuilder(MarkDownGeneratorObj, XmlVsParserObj);
             _mdBuilder.Load(PathToDll, PathToXmlDocumentation);
             var type = _mdBuilder.Types.First(s => s.MemberType == MemberType.Type);
-            _builder = new MdFluentBuilder(template, "home.md", type);
+            _builder = new MdFluentBuilder(TestVariables.TemplateHeader, "home.md", type);
             var result = _builder.Build();
             result.Should().NotBeNull();
             result.Should().BeOfType<MdStringEditor>();
@@ -89,66 +80,81 @@ namespace UnitTest.MarkDown.Generator
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="template"></param>
-        [TestCase(@"
-        @@properties{
-        * * *
-        __Properties__
-        
-        | Value | Name | Summary |
-        | --- | --- | --- |
-        | @prop.type | @prop.name | @prop.summary |
-        
-        * * *
-        }
-        ")]
-        [Ignore("")]
-        public void MdFluentBuilder_Build_Should_ReturnValidContentForProperties(string template)
+        [Test]
+        public void MdFluentBuilder_Build_Should_ReturnValidContentForProperties()
         {
             _mdBuilder = new MarkDownBuilder(MarkDownGeneratorObj, XmlVsParserObj);
             _mdBuilder.Load(PathToDll, PathToXmlDocumentation);
             var type = _mdBuilder.Types.First(s => s.MemberType == MemberType.Type && s.Properties.Count > 0);
-            _builder = new MdFluentBuilder(template, "home.md", type);
+            _builder = new MdFluentBuilder(TestVariables.TemplateProperties, "home.md", type);
             var result = _builder.Build();
+            CheckResult(result, "prop");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [Test]
+        public void MdFluentBuilder_Build_Should_ReturnValidContentForFields()
+        {
+            _mdBuilder = new MarkDownBuilder(MarkDownGeneratorObj, XmlVsParserObj);
+            _mdBuilder.Load(PathToDll, PathToXmlDocumentation);
+            var type = _mdBuilder.Types.First(s => s.MemberType == MemberType.Type && s.Fields.Count > 0);
+            _builder = new MdFluentBuilder(TestVariables.TemplateFields, "home.md", type);
+            var result = _builder.Build();
+            CheckResult(result, "field");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [Test]
+        public void MdFluentBuilder_Build_Should_ReturnValidContentForMethods()
+        {
+            _mdBuilder = new MarkDownBuilder(MarkDownGeneratorObj, XmlVsParserObj);
+            _mdBuilder.Load(PathToDll, PathToXmlDocumentation);
+            var type = _mdBuilder.Types.First(s => s.MemberType == MemberType.Type && s.Methods.Count > 0);
+            _builder = new MdFluentBuilder(TestVariables.TemplateMethods, "home.md", type);
+            var result = _builder.Build();
+            CheckResult(result, "method");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [Test]
+        public void MdFluentBuilder_Build_Should_ReturnValidFullContent()
+        {
+            _mdBuilder = new MarkDownBuilder(MarkDownGeneratorObj, XmlVsParserObj);
+            _mdBuilder.Load(PathToDll, PathToXmlDocumentation);
+
+            var list = new List<IMdStringEditor>();
+
+            foreach (var type in _mdBuilder.Types)
+            {
+                _builder = new MdFluentBuilder(TestVariables.TemplateFull, "home.md", type);
+                var result = _builder.Build();
+                result.Should().NotBeNull();
+                result.Should().BeOfType<MdStringEditor>();
+                result.ToString().Should().NotBeNullOrEmpty();
+                result.ToString().Should().NotContain("@");
+                list.Add(result);
+            }
+            list.Count.Should().Be(_mdBuilder.Types.Count);
+        }
+
+        private void CheckResult(IMdStringEditor result, string tag)
+        {
             result.Should().NotBeNull();
             result.Should().BeOfType<MdStringEditor>();
             result.ToString().Should().NotBeNullOrEmpty();
-            result.ToString().Should().NotContain("@prop.type");
-            result.ToString().Should().NotContain("@prop.name");
-            result.ToString().Should().NotContain("@prop.summary");
-            result.ToString().Should().NotContain("@@properties{");
-            result.ToString().Should().NotContain("}");
-        }
-
-        private Mock<MarkDownField> GetFieldMock(int id, string parentFullName)
-        {
-            var field = new Mock<MarkDownField>(MemberType.Field, null);
-            field.Setup(s => s.Name).Returns($"Field0{id}");
-            field.Setup(s => s.FullName).Returns(parentFullName);
-            field.Setup(s => s.Prefix).Returns($"public field Field0{id}");
-            field.Setup(s => s.Summary).Returns($"summary Field0{id}");
-            return field;
-        }
-
-        private Mock<MarkDownMethod> GetMethodMock(int id, string parentFullName)
-        {
-            var method = new Mock<MarkDownMethod>(MemberType.Method, null);
-            method.Setup(s => s.Name).Returns($"Method0{id}");
-            method.Setup(s => s.FullName).Returns(parentFullName);
-            method.Setup(s => s.Prefix).Returns($"public void Method0{id}");
-            method.Setup(s => s.Summary).Returns($"summary Method0{id}");
-            return method;
-        }
-
-        private Mock<MarkDownProperty> GetPropertyMock(int id, string parentFullName)
-        {
-            var prop = new Mock<MarkDownProperty>(MemberType.Property, null);
-            prop.Setup(s => s.Name).Returns($"Prop0{id}");
-            prop.Setup(s => s.FullName).Returns(parentFullName);
-            prop.Setup(s => s.PropertyType).Returns(typeof(int));
-            prop.Setup(s => s.Prefix).Returns($"public strict Prop0{id}");
-            prop.Setup(s => s.Summary).Returns($"summary Prop0{id}");
-            return prop;
+            result.ToString().Should().NotContain($"@{tag}.type");
+            result.ToString().Should().NotContain($"@{tag}.name");
+            result.ToString().Should().NotContain($"@{tag}.summary");
+            result.ToString().Should().NotContain($"@{tag}s");
+            result.ToString().Should().NotContain($"@end{tag}s");
+            result.ToString().Should().NotContain($"@{tag}");
+            result.ToString().Should().NotContain($"@end{tag}");
         }
     }
 }

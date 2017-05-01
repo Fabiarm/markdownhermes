@@ -8,6 +8,7 @@ __Properties__
 
 | Value | Name | Summary | 
 | --- | --- | --- | 
+| int32 | IntProp1 | IntProp1 in interface | 
 | int32 | IntProp2 | IntProp2 in interface | 
 
 
@@ -23,6 +24,7 @@ __Properties__
 | Value | Name | Summary | 
 | --- | --- | --- | 
 | string | MyField | My field comment | 
+| int32 | Prop1 | Test summary | 
 | int32 | Prop2 | Test prop 2 | 
 
 

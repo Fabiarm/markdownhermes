@@ -60,6 +60,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:MarkDown.TestLibrary.TestClass.GetProp22">
+            <summary>
+            GetProp22 desc
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:MarkDown.TestLibrary.TestClass.TesStringMethod(System.Int32,System.String)">
             <summary>
             Test methods1

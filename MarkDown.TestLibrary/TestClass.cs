@@ -27,7 +27,7 @@ namespace MarkDown.TestLibrary
         /// <summary>
         /// Test summary
         /// </summary>
-        [IgnoredDocs]
+        //[IgnoredDocs]
         public int Prop1 { get; set; }
 
         /// <summary>
@@ -48,6 +48,15 @@ namespace MarkDown.TestLibrary
         /// <returns></returns>
         [IgnoredDocs]
         public int GetProp1()
+        {
+            return 1;
+        }
+
+        /// <summary>
+        /// GetProp22 desc
+        /// </summary>
+        /// <returns></returns>
+        private int GetProp22()
         {
             return 1;
         }

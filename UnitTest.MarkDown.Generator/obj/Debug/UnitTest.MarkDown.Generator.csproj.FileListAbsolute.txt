@@ -20,7 +20,6 @@ C:\Projects\MDG\MarkDown Generator\UniteTest.MarkDown.Generator\bin\Microsoft.Vi
 C:\Projects\MDG\MarkDown Generator\UniteTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.csprojResolveAssemblyReference.cache
 C:\Projects\MDG\MarkDown Generator\UniteTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.dll
 C:\Projects\MDG\MarkDown Generator\UniteTest.MarkDown.Generator\obj\Debug\UnitTest.MarkDown.Generator.pdb
-C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\UnitTest.MarkDown.Generator.XML
 C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\UnitTest.MarkDown.Generator.dll
 C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\UnitTest.MarkDown.Generator.pdb
 C:\GitHub\markdownhermes\UnitTest.MarkDown.Generator\bin\Castle.Core.dll
