@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 	  <id>MarkDown.Hermes</id>
-	  <version>1.1.2.0</version>
+	  <version>1.1.3.0</version>
 	  <title>MarkDown.Hermes</title>
 	  <authors>Nikolay Selyutin (Storm)</authors>
 	  <owners>Nikolay Selyutin</owners>
@@ -21,6 +21,7 @@
 		<file src="\bin\MarkDown.Generator.dll" target="tools\MarkDown.Generator.dll" />
 	  <file src="\bin\MarkDown.Generator.dll" target="lib\MarkDown.Generator.dll" />
 	  <file src="\bin\CommandLine.dll" target="tools\CommandLine.dll" />
+	  <file src="MarkDown.Hermes.Settings.xml" target="content\MarkDown.Hermes.Settings.xml" />
 		<file src="MarkDown.Hermes.targets" target="build\MarkDown.Hermes.targets" />
 	</files>
 </package>

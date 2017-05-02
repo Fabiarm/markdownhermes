@@ -1,33 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <SingleFileMode>False</SingleFileMode>
-  </PropertyGroup>
   <ItemGroup>
-    <IsMultiFiles Condition="'$(SingleFileMode)' == 'False'" Include="-m"/>
     <PathToDll Include="$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).dll"/>
     <PathToXml Include="$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).xml"/>
     <PathToDocs Include="$(MSBuildProjectDirectory)\..\Docs"/>
   </ItemGroup>
   <Target Name="AfterBuild">
-    
+    <XmlPeek XmlInputPath="$(MSBuildProjectDirectory)\Markdown.Hermes.Settings.xml" Query="/root/IsSingleFileMode/text()" Condition="Exists('$(MSBuildProjectDirectory)\Markdown.Hermes.Settings.xml')">
+      <Output TaskParameter="Result" ItemName="IsSingleFileMode" />
+    </XmlPeek>
+    <PropertyGroup>
+      <SingleFileMode>@(IsSingleFileMode)</SingleFileMode>
+    </PropertyGroup>
+    <ItemGroup>
+      <IsMultiFiles Condition="$(SingleFileMode) == 'False' Or @(IsSingleFileMode)==''" Include="-m" />
+    </ItemGroup>
     <Error Condition="!Exists('@(PathToXml)')"
            Text="MarkDown.Hermes can not generate Markdown files: Can not find class library ($(AssemblyName).dll)"
            File="@(PathToDll)"/>
     <Warning
       Condition="!Exists('@(PathToXml)')"
       Text="MarkDown.Hermes can not generate Markdown file(s): Can not find xml documentation file matching assembly name. Please confirm that your project file is configured to output the xml documentation file in this build configuration."
-      File="@(PathToXml)"
-    />
+      File="@(PathToXml)"/>
     <MakeDir Directories="@(PathToDocs)" />
     <Exec
       Command='"$(MSBuildThisFileDirectory)\..\Tools\MarkDown.Hermes.exe" -d "@(PathToDll)" -o "@(PathToDocs)" @(IsMultiFiles)'
-      Condition="Exists('@(PathToXml)') And Exists('@(PathToDll)') And Exists('@(PathToDocs)')"
-    />
+      Condition="Exists('@(PathToXml)') And Exists('@(PathToDll)') And Exists('@(PathToDocs)')"/>
     <Message
       Importance="high"
       Text="MarkDown.Hermes generator has created files: @(PathToDocs)"
-      Condition="Exists('@(PathToXml)') And Exists('@(PathToDll)')"
-    />
+      Condition="Exists('@(PathToXml)') And Exists('@(PathToDll)')"/>
   </Target>
 </Project>
