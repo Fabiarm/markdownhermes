@@ -83,6 +83,7 @@
     <Compile Include="Helper\UnitTestOutputWriter.cs" />
     <Compile Include="Helper\UnitTestMarkDownReactor.cs" />
     <Compile Include="Helper\UnitTestValidator.cs" />
+    <Compile Include="Helper\UnitTestXmlContentReader.cs" />
     <Compile Include="UnitTestHermesBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helper\UnitTestExecutor.cs" />
@@ -99,6 +100,11 @@
       <Project>{9750bbc3-9e0d-43be-a5e1-799b6ee7c16d}</Project>
       <Name>MarkDown.TestLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\MarkDown.Hermes.Settings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

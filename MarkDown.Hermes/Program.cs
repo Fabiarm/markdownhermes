@@ -6,7 +6,7 @@ namespace MarkDown.Hermes
     {
         static void Main(string[] args)
         {
-            Executor.Run(args, Forge.GetOutputWriter());
+            Executor.Run(args, Forge.GetOutputWriter(), Forge.GetXmlContentReader());
         }
     }
 }

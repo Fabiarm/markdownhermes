@@ -14,11 +14,14 @@ namespace UnitTest.MarkDown.Hermes.Helper
     {
         private MarkDownReactor _reactor;
         private Mock<IOutputWriter> _writerMock;
+        private Mock<IXmlContentReader> _xmlReaderMock;
         public override bool UseOptions => true;
         public override void SetUpConfig()
         {
             _writerMock = new Mock<IOutputWriter>();
-            _reactor = new MarkDownReactor(_writerMock.Object);
+            _xmlReaderMock = new Mock<IXmlContentReader>();
+            _xmlReaderMock.Setup(s => s.GetContent(It.IsAny<string>())).Returns(string.Empty);
+            _reactor = new MarkDownReactor(_writerMock.Object, _xmlReaderMock.Object);
         }
 
         [Test]
@@ -54,6 +57,21 @@ namespace UnitTest.MarkDown.Hermes.Helper
         public void MarkDownReactor_Build_WhenSingleFile_Should_ReturnFiles()
         {
             OptionsObj.IsMiltiFiles = false;
+            OptionsObj.InputSettingsFilePath = null;
+            _reactor = new MarkDownReactor(Forge.GetOutputWriter(), Forge.GetXmlContentReader());
+            _reactor.Load(DllPathObj, XmlPathObj);
+            _reactor.Build(OptionsObj);
+            var files = Directory.EnumerateFiles(OutPutPathObj).ToList();
+            files.Should().NotBeNull();
+            files.Count(s => s.Contains("Home.md")).Should().Be(1);
+        }
+
+        [Test]
+        [Category("Integration")]
+        public void MarkDownReactor_Build_WhenSingleFileAndSettings_Should_ReturnFiles()
+        {
+            OptionsObj.IsMiltiFiles = true;
+            _reactor = new MarkDownReactor(Forge.GetOutputWriter(), Forge.GetXmlContentReader());
             _reactor.Load(DllPathObj, XmlPathObj);
             _reactor.Build(OptionsObj);
             var files = Directory.EnumerateFiles(OutPutPathObj).ToList();
@@ -66,6 +84,7 @@ namespace UnitTest.MarkDown.Hermes.Helper
         public void MarkDownReactor_Build_WhenMiltiFiles_Should_ReturnFiles()
         {
             OptionsObj.IsMiltiFiles = true;
+            _reactor = new MarkDownReactor(Forge.GetOutputWriter(), Forge.GetXmlContentReader());
             _reactor.Load(DllPathObj, XmlPathObj);
             _reactor.Build(OptionsObj);
             var files = Directory.EnumerateFiles(OutPutPathObj).ToList();

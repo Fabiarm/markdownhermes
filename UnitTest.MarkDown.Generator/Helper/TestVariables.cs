@@ -8,14 +8,14 @@ namespace UnitTest.MarkDown.Generator.Helper
     public static class TestVariables
     {
         public static string TemplateFields = "@fields\n" +
-                                      "* * * \n" +
-                                      "__Fields__\n" +
-                                      "\n" +
-                                      "| Value | Name | Summary |\n" +
-                                      "| --- | --- | --- |\n" +
-                                      "@field| @field.type | @field.name | @field.summary |@endfield\n" +
-                                      "@endfields\n" +
-                                      "";
+                                              "* * * \n" +
+                                              "__Fields__\n" +
+                                              "\n" +
+                                              "| Value | Name | Summary |\n" +
+                                              "| --- | --- | --- |\n" +
+                                              "@field| @field.type | @field.name | @field.summary |@endfield\n" +
+                                              "@endfields\n" +
+                                              "";
 
         public static string TemplateProperties = "@props\n" +
                                                   "* * * \n" +

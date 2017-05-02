@@ -9,7 +9,7 @@
   <!--Template Id for documentation-->
   <!--Allows to create documentation by special pattern; Default value: Default-->
   <!--Values:Default/<Name of template>-->
-  <TemplateId>Default</TemplateId>
+  <TemplateId>Sting</TemplateId>
   <Templates>
     <Template Id="Sting">
 ### @prefix
@@ -72,41 +72,6 @@ __Fields__
 @methods
 * * *
 __Methods__
-
-| Value | __Name__ | Summary |
-| --- | --- | --- |
-@method| `@method.type` | __@method.name__ | @method.summary |@endmethod
-@endmethods
-
-* * *
-    </Template>
-    <Template Id="Kid">
-##### @prefix
-###### Namespace: __@fullName__
-
-###### Summary: @summary
-
-@props
-* * *
-###### __Properties__
-
-| Value | __Name__ | Summary |
-| --- | --- | --- |
-@prop| `@prop.type` | __@prop.name__ | @prop.summary |@endprop
-@endprops
-
-@fields
-* * *
-###### __Fields__
-
-| Value | __Name__ | Summary |
-| --- | --- | --- |
-@field| `@field.type` | __@field.name__ | @field.summary |@endfield
-@endfields
-
-@methods
-* * *
-###### __Methods__
 
 | Value | __Name__ | Summary |
 | --- | --- | --- |

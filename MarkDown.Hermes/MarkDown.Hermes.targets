@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <IsExistSettings Include="Exists('$(MSBuildProjectDirectory)\Properties\Markdown.Hermes.Settings.xml')"/>
+    <PathToSettings Include="$(MSBuildProjectDirectory)\Properties\Markdown.Hermes.Settings.xml" Condition="@(IsExistSettings) == 'True'"/>
     <PathToDll Include="$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).dll"/>
     <PathToXml Include="$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).xml"/>
     <PathToDocs Include="$(MSBuildProjectDirectory)\..\Docs"/>
   </ItemGroup>
   <Target Name="AfterBuild">
-    <XmlPeek XmlInputPath="$(MSBuildProjectDirectory)\Markdown.Hermes.Settings.xml" Query="/root/IsSingleFileMode/text()" Condition="Exists('$(MSBuildProjectDirectory)\Markdown.Hermes.Settings.xml')">
+    <XmlPeek XmlInputPath="@(PathToSettings)" Query="/root/IsSingleFileMode/text()" Condition="@(IsExistSettings) == 'True'">
       <Output TaskParameter="Result" ItemName="IsSingleFileMode" />
     </XmlPeek>
     <PropertyGroup>
       <SingleFileMode>@(IsSingleFileMode)</SingleFileMode>
     </PropertyGroup>
     <ItemGroup>
-      <IsMultiFiles Condition="$(SingleFileMode) == 'False' Or @(IsSingleFileMode)==''" Include="-m" />
+      <IsMultiFiles Condition="$(SingleFileMode) == 'False' Or $(SingleFileMode) == '0' Or @(IsSingleFileMode)==''" Include="-m" />
     </ItemGroup>
     <Error Condition="!Exists('@(PathToXml)')"
            Text="MarkDown.Hermes can not generate Markdown files: Can not find class library ($(AssemblyName).dll)"
@@ -24,7 +26,7 @@
       File="@(PathToXml)"/>
     <MakeDir Directories="@(PathToDocs)" />
     <Exec
-      Command='"$(MSBuildThisFileDirectory)\..\Tools\MarkDown.Hermes.exe" -d "@(PathToDll)" -o "@(PathToDocs)" @(IsMultiFiles)'
+      Command='"$(MSBuildThisFileDirectory)\..\Tools\MarkDown.Hermes.exe" -d "@(PathToDll)" -o "@(PathToDocs)" @(IsMultiFiles) -s "@(PathToSettings)"'
       Condition="Exists('@(PathToXml)') And Exists('@(PathToDll)') And Exists('@(PathToDocs)')"/>
     <Message
       Importance="high"

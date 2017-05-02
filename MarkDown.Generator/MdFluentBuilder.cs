@@ -71,7 +71,9 @@ namespace MarkDown.Generator
             if ((isProperties && Type.Properties.Count == 0) ||
                 (isFields && Type.Fields.Count == 0) ||
                 (isMethods && Type.Methods.Count == 0))
+            {
                 return template.Replace(matchProperties[0].Value, string.Empty);
+            }
 
             var props = matchProperties[0]
                 .Value.Replace($"@{tag}s", string.Empty)
@@ -112,5 +114,10 @@ namespace MarkDown.Generator
                 .Replace($"@{tag}s", string.Empty)
                 .Replace($"@end{tag}s", string.Empty);
         }
+
+        //private string RemoveEmptyStrings(string text)
+        //{
+        //    return Regex.Replace(text, @"^\s+$[\r\n]*", "", RegexOptions.Multiline);
+        //}
     }
 }

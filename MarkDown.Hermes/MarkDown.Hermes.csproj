@@ -60,8 +60,10 @@
     <Compile Include="Helper\Executor.cs" />
     <Compile Include="Helper\MarkDownReactor.cs" />
     <Compile Include="Helper\Validator.cs" />
+    <Compile Include="Helper\XmlContentReader.cs" />
     <Compile Include="Interfaces\IMarkDownReactor.cs" />
     <Compile Include="Interfaces\IOutputWriter.cs" />
+    <Compile Include="Interfaces\IXmlContentReader.cs" />
     <Compile Include="Models\Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,7 +84,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MarkDown.Hermes.Settings.xml" />
+    <Content Include="MarkDown.Hermes.Settings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

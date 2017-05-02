@@ -3,6 +3,7 @@ using FluentAssertions;
 using MarkDown.Generator;
 using MarkDown.Generator.Interfaces;
 using NUnit.Framework;
+using UnitTest.MarkDown.Generator.Helper;
 
 namespace UnitTest.MarkDown.Generator
 {
@@ -110,23 +111,13 @@ namespace UnitTest.MarkDown.Generator
         /// <summary>
         /// 
         /// </summary>
-        [TestCase(@"
-        ### @Prefix
-        __Namespace__: @FullName
-        * * *
-        __Summary__: @Summary
-
-        if(@properties){
-        * * *
-        __Properties__
-        }
-        ")]
-        public void MarkDownBuilder_BuildWithTemplate_Should_ReturnNoException(string template)
+        [Test]
+        public void MarkDownBuilder_BuildWithTemplate_Should_ReturnNoException()
         {
             _builder.Load(PathToDll, PathToXmlDocumentation);
             _builder.Types.Should().NotBeNull();
             _builder.Types.Count.Should().BePositive();
-            _builder.Build(template);
+            _builder.Build(TestVariables.TemplateFull);
             _builder.Content.Should().NotBeNull();
             _builder.Content.Should().AllBeOfType<MdStringEditor>();
             _builder.Content.Should().AllBeAssignableTo<IMdStringEditor>();

@@ -34,8 +34,8 @@ namespace MarkDown.Hermes.Helper
             var dllPath = Path.GetFullPath(options.InputDllFilePath);
             var assembly = Assembly.LoadFile(dllPath);
             var codeBase = new Uri(assembly.CodeBase);
-            var xmlPath = Path.Combine(Path.GetDirectoryName(codeBase.LocalPath),
-                $"{assembly.GetName().Name}.xml");
+            var xmlPath = Path.Combine(path1: Path.GetDirectoryName(codeBase.LocalPath),
+                path2: $"{assembly.GetName().Name}.xml");
             if (!IsFileExist(xmlPath))
                 throw new FileNotFoundException($"XML documentation '{xmlPath}' is missing");
             return xmlPath;

@@ -16,6 +16,7 @@ namespace UnitTest.MarkDown.Hermes
         public Options OptionsObj { get; set; }
         public string DllPathObj { get; set; }
         public string XmlPathObj { get; set; }
+        public string XmlSettingsPathObj { get; set; }
 
         public string OutPutPathObj { get; set; }
 
@@ -30,9 +31,11 @@ namespace UnitTest.MarkDown.Hermes
                     @"MarkDown.TestLibrary.dll");
                 XmlPathObj = Path.Combine(Path.GetDirectoryName(codeBase.LocalPath),
                     @"MarkDown.TestLibrary.xml");
+                XmlSettingsPathObj = Path.Combine(Path.GetDirectoryName(codeBase.LocalPath),
+                    @"TestData\MarkDown.Hermes.Settings.xml");
                 OutPutPathObj = Path.Combine(Path.GetDirectoryName(codeBase.LocalPath),
                     @"Docs");
-                OptionsObj = new Options {InputDllFilePath = DllPathObj, OutputDirectoryPath = OutPutPathObj};
+                OptionsObj = new Options {InputDllFilePath = DllPathObj, OutputDirectoryPath = OutPutPathObj, InputSettingsFilePath = XmlSettingsPathObj};
             }
             SetUpConfig();
         }

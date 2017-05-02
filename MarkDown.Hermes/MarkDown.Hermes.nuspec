@@ -10,18 +10,18 @@
 	  <projectUrl>https://github.com/Fabiarm/markdownhermes/tree/master</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/Fabiarm/markdownhermes/master/icons/icon_64x64.png</iconUrl>
 	  <requireLicenseAcceptance>false</requireLicenseAcceptance>
-	  <description>Convert Visual Studio generated XML Comment XML files (using dll file) into flavoured MarkDown. Allows to mark class, interface, struct, method, field, property using [Documented] attribute. To ignore use [IgnoredDocs]</description>
-	  <summary>Allows for creating markdown files (md) for each artefact in a library project. Use the following types: class,interface,struct,method,field,property. Use [Documented]/[IgnoredDocs] attribute</summary>
+	  <description>Convert Visual Studio generated XML Comment XML files (using dll file) into flavoured MarkDown by template. Allows to mark class, interface, struct, method, field, property using [Documented] attribute. To ignore use [IgnoredDocs]</description>
+	  <summary>Allows for creating markdown files (md) by template for each artefact in a library project. Use the following types: class,interface,struct,method,field,property. Use [Documented]/[IgnoredDocs] attribute</summary>
 	  <releaseNotes>Guide is available by the link https://github.com/Fabiarm/markdownhermes/wiki/How-to-use</releaseNotes>
 	  <copyright>2017 Nikolay Selyutin (Storm)</copyright>
-	  <tags>markdown, xmldocumentation, comments, generator, library</tags>
+	  <tags>markdown, xmldocumentation, comments, generator, library, xml</tags>
 	</metadata>
 	<files>
 		<file src="\bin\MarkDown.Hermes.exe" target="tools\MarkDown.Hermes.exe" />
 		<file src="\bin\MarkDown.Generator.dll" target="tools\MarkDown.Generator.dll" />
 	  <file src="\bin\MarkDown.Generator.dll" target="lib\MarkDown.Generator.dll" />
 	  <file src="\bin\CommandLine.dll" target="tools\CommandLine.dll" />
-	  <file src="MarkDown.Hermes.Settings.xml" target="content\MarkDown.Hermes.Settings.xml" />
-		<file src="MarkDown.Hermes.targets" target="build\MarkDown.Hermes.targets" />
+	  <file src="\bin\MarkDown.Hermes.Settings.xml" target="content\Properties\MarkDown.Hermes.Settings.xml" />
+		<file src="\bin\MarkDown.Hermes.targets" target="build\MarkDown.Hermes.targets" />
 	</files>
 </package>

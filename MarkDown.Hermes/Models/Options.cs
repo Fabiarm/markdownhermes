@@ -15,6 +15,9 @@ namespace MarkDown.Hermes.Models
             "Flag, if true: to create separate md file for each class that marked [Documented] attribute, else to generate single file")]
         public bool IsMiltiFiles { get; set; }
 
+        [Option('s', "inputSettingsFilePath", HelpText = "Input path to setting's file (xml)", DefaultValue = "")]
+        public string InputSettingsFilePath { get; set; }
+
         [HelpOption]
         public string GetUsage()
         {

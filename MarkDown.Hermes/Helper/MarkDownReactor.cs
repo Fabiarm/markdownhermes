@@ -12,17 +12,20 @@ namespace MarkDown.Hermes.Helper
     {
         private readonly MarkDownBuilder _builder;
         private readonly IOutputWriter _writer;
+        private readonly IXmlContentReader _xmlReader;
 
-        public MarkDownReactor(IOutputWriter writer)
+        public MarkDownReactor(IOutputWriter writer, IXmlContentReader xmlReader)
         {
             _builder = new MarkDownBuilder(SpecHelper.CreateGenerator(), SpecHelper.CreateXmlVsParser());
             _writer = writer;
+            _xmlReader = xmlReader;
         }
 
         public MarkDownReactor()
         {
             _builder = new MarkDownBuilder(SpecHelper.CreateGenerator(), SpecHelper.CreateXmlVsParser());
             _writer = Forge.GetOutputWriter();
+            _xmlReader = Forge.GetXmlContentReader();
         }
 
         public void Load(string dllPath, string dllXmlPath)
@@ -35,11 +38,21 @@ namespace MarkDown.Hermes.Helper
             if (options == null)
                 throw new ArgumentNullException(nameof(options));
 
-            _builder.Build();
+            _writer.WriteInfo($"Single File mode: {!options.IsMiltiFiles}");
+
+            var template = _xmlReader.GetContent(options.InputSettingsFilePath);
+            if (template != string.Empty)
+            {
+                _writer.WriteInfo($"Use template pattern \n" +
+                                  $"{template}");
+                _builder.Build(template);
+            }
+            else
+                _builder.Build();
 
             if (_builder.Content == null || _builder.Content.Count <= 0) return;
 
-            _writer.WriteInfo($"Single File mode: {!options.IsMiltiFiles}");
+            
 
             if (!options.IsMiltiFiles)
             {

@@ -8,5 +8,10 @@ namespace MarkDown.Hermes.Helper
         {
             return new OutputWriter();
         }
+
+        public static IXmlContentReader GetXmlContentReader()
+        {
+            return new XmlContentReader();
+        }
     }
 }
