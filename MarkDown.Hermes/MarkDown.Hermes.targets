@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SingleFileMode>False</SingleFileMode>
+  </PropertyGroup>
   <ItemGroup>
-    <IsMultiFiles Include="-m"/>
+    <IsMultiFiles Condition="'$(SingleFileMode)' == 'False'" Include="-m"/>
     <PathToDll Include="$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).dll"/>
     <PathToXml Include="$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).xml"/>
     <PathToDocs Include="$(MSBuildProjectDirectory)\..\Docs"/>
   </ItemGroup>
   <Target Name="AfterBuild">
+    
     <Error Condition="!Exists('@(PathToXml)')"
            Text="MarkDown.Hermes can not generate Markdown files: Can not find class library ($(AssemblyName).dll)"
            File="@(PathToDll)"/>
@@ -25,5 +29,6 @@
       Text="MarkDown.Hermes generator has created files: @(PathToDocs)"
       Condition="Exists('@(PathToXml)') And Exists('@(PathToDll)')"
     />
+    <Message Importance="high" Text="SingleFileMode:$(SingleFileMode)" Condition="Exists('@(PathToXml)') And Exists('@(PathToDll)')" />
   </Target>
 </Project>
