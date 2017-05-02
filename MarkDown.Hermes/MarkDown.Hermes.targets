@@ -29,6 +29,5 @@
       Text="MarkDown.Hermes generator has created files: @(PathToDocs)"
       Condition="Exists('@(PathToXml)') And Exists('@(PathToDll)')"
     />
-    <Message Importance="high" Text="SingleFileMode:$(SingleFileMode)" Condition="Exists('@(PathToXml)') And Exists('@(PathToDll)')" />
   </Target>
 </Project>
