@@ -102,6 +102,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TestData\MarkDown.Hermes.Settings.Fake.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestData\MarkDown.Hermes.Settings.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

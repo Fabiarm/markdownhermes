@@ -18,9 +18,7 @@ namespace MarkDown.Hermes.Helper
                     doc.Load(pathToSettings);
                     var templateId = doc.SelectSingleNode("//root/TemplateId")?.InnerText;
                     if (!string.IsNullOrWhiteSpace(templateId) &&
-                        templateId.Equals("default", StringComparison.OrdinalIgnoreCase))
-                        return string.Empty;
-                    if (!string.IsNullOrWhiteSpace(templateId))
+                        !templateId.Equals("default", StringComparison.OrdinalIgnoreCase))
                     {
                         var pattern = $"//root/Templates/Template[@Id='{templateId}']";
                         var node = doc.SelectSingleNode(pattern);
@@ -45,7 +43,10 @@ namespace MarkDown.Hermes.Helper
                 {
                     var doc = new XmlDocument();
                     doc.Load(pathToSettings);
-                    return doc.SelectSingleNode("//root/TemplateId")?.InnerText;
+                    var result = doc.SelectSingleNode("//root/TemplateId")?.InnerText;
+                    if (result != null)
+                        return result;
+                    throw new Exception("Could not find template id");
                 }
             }
             catch (Exception ex)

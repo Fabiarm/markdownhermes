@@ -4,6 +4,6 @@
     <StartArguments>-d "C:\Projects\MDG\MarkDown Generator\UnitTest.MarkDown.Hermes\TestData\MarkDown.TestLibrary.dll" -o "C:\Projects\Purchase\Docs" -m</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
 </Project>
