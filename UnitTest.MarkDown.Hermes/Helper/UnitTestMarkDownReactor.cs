@@ -41,6 +41,7 @@ namespace UnitTest.MarkDown.Hermes.Helper
         [Category("Integration")]
         public void MarkDownReactor_Load_Should_ReturnValidResult()
         {
+            _reactor = new MarkDownReactor(Forge.GetOutputWriter(), Forge.GetXmlContentReader());
             _reactor.Load(DllPathObj, XmlPathObj);
         }
 
@@ -48,6 +49,7 @@ namespace UnitTest.MarkDown.Hermes.Helper
         [Category("Integration")]
         public void MarkDownReactor_Build_Should_ReturnValidResult()
         {
+            _reactor = new MarkDownReactor(Forge.GetOutputWriter(), Forge.GetXmlContentReader());
             _reactor.Load(DllPathObj, XmlPathObj);
             _reactor.Build(OptionsObj);
         }

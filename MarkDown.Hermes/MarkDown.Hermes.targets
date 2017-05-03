@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <IsExistSettings Include="Exists('$(MSBuildProjectDirectory)\Properties\Markdown.Hermes.Settings.xml')"/>
-    <PathToSettings Include="$(MSBuildProjectDirectory)\Properties\Markdown.Hermes.Settings.xml" Condition="@(IsExistSettings) == 'True'"/>
     <PathToDll Include="$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).dll"/>
     <PathToXml Include="$(MSBuildProjectDirectory)\$(OutputPath)\$(AssemblyName).xml"/>
     <PathToDocs Include="$(MSBuildProjectDirectory)\..\Docs"/>
   </ItemGroup>
   <Target Name="AfterBuild">
-    <XmlPeek XmlInputPath="@(PathToSettings)" Query="/root/IsSingleFileMode/text()" Condition="@(IsExistSettings) == 'True'">
+    <ItemGroup>
+      <PathToSettings Include="$(MSBuildProjectDirectory)\Properties\Markdown.Hermes.Settings.xml" Condition="Exists('$(MSBuildProjectDirectory)\Properties\Markdown.Hermes.Settings.xml')"/>
+    </ItemGroup>
+    <XmlPeek XmlInputPath="@(PathToSettings)" Query="/root/IsSingleFileMode/text()" Condition="Exists('$(MSBuildProjectDirectory)\Properties\Markdown.Hermes.Settings.xml')">
       <Output TaskParameter="Result" ItemName="IsSingleFileMode" />
     </XmlPeek>
     <PropertyGroup>

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Text.RegularExpressions;
 using System.Xml;
 using MarkDown.Hermes.Interfaces;
 
@@ -28,6 +27,25 @@ namespace MarkDown.Hermes.Helper
                         if (node != null)
                             return node.InnerText;
                     }
+                }
+            }
+            catch (Exception ex)
+            {
+                return string.Empty;
+            }
+            return string.Empty;
+        }
+
+        public string GetTemplateId(string pathToSettings)
+        {
+            if (string.IsNullOrEmpty(pathToSettings)) return string.Empty;
+            try
+            {
+                if (File.Exists(pathToSettings))
+                {
+                    var doc = new XmlDocument();
+                    doc.Load(pathToSettings);
+                    return doc.SelectSingleNode("//root/TemplateId")?.InnerText;
                 }
             }
             catch (Exception ex)

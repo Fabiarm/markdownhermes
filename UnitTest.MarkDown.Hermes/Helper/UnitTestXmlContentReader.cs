@@ -15,12 +15,21 @@ namespace UnitTest.MarkDown.Hermes.Helper
         {
             _reader = new XmlContentReader();
         }
+
         [Test]
         public void XmlContentReader_GetContent_ShouldReturnNoException()
         {
             string result = _reader.GetContent(string.Empty);
             result.Should().BeEmpty();
         }
+
+        [Test]
+        public void XmlContentReader_GetTemplateId_ShouldReturnNoException()
+        {
+            string result = _reader.GetTemplateId(string.Empty);
+            result.Should().BeEmpty();
+        }
+
         [Test]
         public void XmlContentReader_GetContent_WhenCorrectPath_ShouldReturnNoException()
         {
@@ -28,10 +37,26 @@ namespace UnitTest.MarkDown.Hermes.Helper
             result.Should().NotBeNullOrEmpty();
             result.Should().Contain("@");
         }
+
+        [Test]
+        public void XmlContentReader_GetTemplateId_WhenCorrectPath_ShouldReturnNoException()
+        {
+            string result = _reader.GetTemplateId(XmlSettingsPathObj);
+            result.Should().NotBeNullOrEmpty();
+            result.Should().Contain("Sting");
+        }
+
         [Test]
         public void XmlContentReader_GetContent_WhenInvalidPath_ShouldReturnNoException()
         {
             var result = _reader.GetContent("xmlSettingsPathObj");
+            result.Should().BeEmpty();
+        }
+
+        [Test]
+        public void XmlContentReader_GetTemplateId_WhenInvalidPath_ShouldReturnNoException()
+        {
+            var result = _reader.GetTemplateId("templateId");
             result.Should().BeEmpty();
         }
     }

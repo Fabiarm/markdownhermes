@@ -43,8 +43,9 @@ namespace MarkDown.Hermes.Helper
             var template = _xmlReader.GetContent(options.InputSettingsFilePath);
             if (template != string.Empty)
             {
+                var templateId = _xmlReader.GetTemplateId(options.InputSettingsFilePath);
                 _writer.WriteInfo($"Use template pattern \n" +
-                                  $"{template}");
+                                  $"{templateId}");
                 _builder.Build(template);
             }
             else
