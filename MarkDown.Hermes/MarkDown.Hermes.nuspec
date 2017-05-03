@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-	  <id>MarkDown.Hermes</id>
-	  <version>1.1.3.0</version>
-	  <title>MarkDown.Hermes</title>
-	  <authors>Nikolay Selyutin (Storm)</authors>
-	  <owners>Nikolay Selyutin</owners>
-	  <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
-	  <projectUrl>https://github.com/Fabiarm/markdownhermes/tree/master</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Fabiarm/markdownhermes/master/icons/icon_64x64.png</iconUrl>
-	  <requireLicenseAcceptance>false</requireLicenseAcceptance>
-	  <description>Convert Visual Studio generated XML Comment XML files (using dll file) into flavoured MarkDown by template. Allows to mark class, interface, struct, method, field, property using [Documented] attribute. To ignore use [IgnoredDocs]</description>
-	  <summary>Allows for creating markdown files (md) by template for each artefact in a library project. Use the following types: class,interface,struct,method,field,property. Use [Documented]/[IgnoredDocs] attribute</summary>
-	  <releaseNotes>Guide is available by the link https://github.com/Fabiarm/markdownhermes/wiki/How-to-use</releaseNotes>
-	  <copyright>2017 Nikolay Selyutin (Storm)</copyright>
-	  <tags>markdown, xmldocumentation, comments, generator, library, xml</tags>
-	</metadata>
-	<files>
-		<file src="\bin\MarkDown.Hermes.exe" target="tools\MarkDown.Hermes.exe" />
-		<file src="\bin\MarkDown.Generator.dll" target="tools\MarkDown.Generator.dll" />
-	  <file src="\bin\MarkDown.Generator.dll" target="lib\MarkDown.Generator.dll" />
-	  <file src="\bin\CommandLine.dll" target="tools\CommandLine.dll" />
-	  <file src="\bin\MarkDown.Hermes.Settings.xml" target="content\Properties\MarkDown.Hermes.Settings.xml" />
-		<file src="\bin\MarkDown.Hermes.targets" target="build\MarkDown.Hermes.targets" />
-	</files>
+  <metadata>
+    <id>MarkDown.Hermes</id>
+    <version>1.1.3.0</version>
+    <title>MarkDown.Hermes</title>
+    <authors>Nikolay Selyutin (Storm)</authors>
+    <owners>Nikolay Selyutin</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/Fabiarm/markdownhermes/tree/1.1.3.0</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Fabiarm/markdownhermes/1.1.3.0/icons/icon_64x64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Convert Visual Studio generated XML Comment XML files (using dll file) into flavoured MarkDown by template. Allows to mark class, interface, struct, method, field, property using [Documented] attribute. To ignore use [IgnoredDocs]</description>
+    <summary>Allows for creating markdown files (md) by template for each artefact in a library project. Use the following types: class,interface,struct,method,field,property. Use [Documented]/[IgnoredDocs] attribute</summary>
+    <releaseNotes>Guide is available by the link https://github.com/Fabiarm/markdownhermes/wiki/How-to-use In 1.1.3.0: the template pattern (xml) have been added.</releaseNotes>
+    <copyright>2017 Nikolay Selyutin (Storm)</copyright>
+    <tags>markdown, xmldocumentation, comments, generator, library, xml</tags>
+  </metadata>
+  <files>
+    <file src="\bin\MarkDown.Hermes.exe" target="tools\MarkDown.Hermes.exe" />
+    <file src="\bin\MarkDown.Generator.dll" target="tools\MarkDown.Generator.dll" />
+    <file src="\bin\MarkDown.Generator.dll" target="lib\MarkDown.Generator.dll" />
+    <file src="\bin\CommandLine.dll" target="tools\CommandLine.dll" />
+    <file src="\bin\MarkDown.Hermes.Settings.xml" target="content\Properties\MarkDown.Hermes.Settings.xml" />
+    <file src="\bin\MarkDown.Hermes.targets" target="build\MarkDown.Hermes.targets" />
+  </files>
 </package>
